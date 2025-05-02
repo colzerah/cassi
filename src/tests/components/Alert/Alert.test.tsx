@@ -2,7 +2,7 @@ import { render, screen } from "@testing-library/react";
 import { Alert } from "@/components/Alert";
 
 describe("Alert", () => {
-  it("deve renderizar o alerta com tipo success e texto fornecido", () => {
+  it("should render the alert with type success and provided text", () => {
     render(<Alert type="success">Sucesso ao enviar</Alert>);
 
     expect(screen.getByText(/sucesso ao enviar/i)).toBeInTheDocument();
@@ -11,7 +11,7 @@ describe("Alert", () => {
     expect(icon).toHaveAttribute("src", expect.stringContaining("/img.jpg"));
   });
 
-  it("deve renderizar o alerta com tipo error e texto fornecido", () => {
+  it("should render the alert with type error and provided text", () => {
     render(<Alert type="error">Erro ao enviar</Alert>);
 
     expect(screen.getByText(/erro ao enviar/i)).toBeInTheDocument();

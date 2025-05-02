@@ -11,6 +11,7 @@ import {
 import { ALERT_SUCCESS, ALERT_ERROR, ALERT_SUCCESS_MSG } from "@/assets";
 import { Label } from "../Label";
 import { Divider } from "../Divider";
+import COLORS from "@/themes/colors.pallete";
 
 interface AlertProps {
   children: React.ReactNode;
@@ -20,13 +21,13 @@ interface AlertProps {
 export function Alert({ children, type }: AlertProps) {
   const resolvedColor = {
     success: {
-      background: "#d6fbd0",
-      borderColor: "#29bb11",
+      background: COLORS.green[100],
+      borderColor: COLORS.green[200],
       icon: ALERT_SUCCESS.src,
     },
     error: {
-      background: "#fbd0d4",
-      borderColor: "#ec1529",
+      background: COLORS.red[100],
+      borderColor: COLORS.red[300],
 
       icon: ALERT_ERROR.src,
     },

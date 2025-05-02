@@ -1,27 +1,27 @@
 import { Meta, StoryObj } from "@storybook/react";
-import { Label } from "@/components/Label"; // Ajuste o caminho se necessário
+import { Label } from "@/components/Label";
 
 const meta: Meta<typeof Label> = {
-  title: "Components/Label", // Título na árvore do Storybook
-  component: Label, // Componente que estamos documentando
-  tags: ["autodocs"], // Tags para automatizar a documentação
+  title: "Components/Label",
+  component: Label,
+  tags: ["autodocs"],
   argTypes: {
-    text: { control: "text" }, // Controle para editar o texto
+    text: { control: "text" },
     type: {
-      control: "radio", // Controle para selecionar o tipo do Label (h1, h2, text)
+      control: "radio",
       options: ["h1", "h2", "text"],
     },
     colorScheme: {
-      control: "radio", // Controle para selecionar a cor do texto
+      control: "radio",
       options: ["primary", "secondary", "tertiary", "white"],
     },
-    fontSize: { control: "number" }, // Controle para definir o tamanho da fonte
-    fontWeight: { control: "number" }, // Controle para definir o peso da fonte
-    lineHeight: { control: "number" }, // Controle para definir a altura da linha
-    mt: { control: "number" }, // Controle para definir a margem superior
-    ml: { control: "number" }, // Controle para definir a margem esquerda
-    mb: { control: "number" }, // Controle para definir a margem inferior
-    mr: { control: "number" }, // Controle para definir a margem direita
+    fontSize: { control: "number" },
+    fontWeight: { control: "number" },
+    lineHeight: { control: "number" },
+    mt: { control: "number" },
+    ml: { control: "number" },
+    mb: { control: "number" },
+    mr: { control: "number" },
   },
 };
 
@@ -31,48 +31,48 @@ type Story = StoryObj<typeof Label>;
 
 export const Default: Story = {
   args: {
-    text: "Texto padrão do Label", // Texto do Label
-    type: "text", // Tipo de Label
-    colorScheme: "primary", // Cor do texto
-    fontSize: 16, // Tamanho da fonte
-    fontWeight: 400, // Peso da fonte
-    lineHeight: 24, // Altura da linha
+    text: "Texto padrão do Label",
+    type: "text",
+    colorScheme: "primary",
+    fontSize: 16,
+    fontWeight: 400,
+    lineHeight: 24,
   },
 };
 
 export const H1Label: Story = {
   args: {
-    text: "Título H1", // Texto do Label
-    type: "h1", // Tipo de Label
-    colorScheme: "primary", // Cor do texto
+    text: "Título H1",
+    type: "h1",
+    colorScheme: "primary",
   },
 };
 
 export const H2Label: Story = {
   args: {
-    text: "Título H2", // Texto do Label
-    type: "h2", // Tipo de Label
-    colorScheme: "secondary", // Cor do texto
+    text: "Título H2",
+    type: "h2",
+    colorScheme: "secondary",
   },
 };
 
 export const CustomTextLabel: Story = {
   args: {
-    text: "Texto Customizado", // Texto do Label
-    type: "text", // Tipo de Label
-    fontSize: 14, // Tamanho da fonte
-    fontWeight: 700, // Peso da fonte
-    lineHeight: 20, // Altura da linha
-    colorScheme: "tertiary", // Cor do texto
+    text: "Texto Customizado",
+    type: "text",
+    fontSize: 14,
+    fontWeight: 700,
+    lineHeight: 20,
+    colorScheme: "tertiary",
   },
 };
 
 export const WhiteLabel: Story = {
   args: {
-    text: "Texto Branco", // Texto do Label
-    type: "text", // Tipo de Label
-    colorScheme: "white", // Cor do texto
-    fontSize: 18, // Tamanho da fonte
-    fontWeight: 500, // Peso da fonte
+    text: "Texto Branco",
+    type: "text",
+    colorScheme: "white",
+    fontSize: 18,
+    fontWeight: 500,
   },
 };

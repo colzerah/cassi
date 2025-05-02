@@ -2,11 +2,9 @@ import { render, screen, fireEvent } from "@testing-library/react";
 import { Navbar } from "@/components/NavBar";
 import { SOCIAL_LINK_ENUM } from "@/utils/Enums";
 
-// Mock do window.open
 const openMock = jest.fn();
 window.open = openMock;
 
-// Mocks dos assets usados
 jest.mock("@/assets", () => ({
   CASSI_LOGO: { src: "CASSI-LOGO.png" },
   STETHOSCOPE: { src: "STETHOSCOPE.png" },
@@ -21,7 +19,7 @@ describe("Navbar", () => {
     openMock.mockClear();
   });
 
-  it("Nav deve abrir a URL correta ao clicar nos ícones das redes sociais", () => {
+  it("Nav should open correct URL when clicking on social media icons", () => {
     render(<Navbar />);
 
     const openSpy = jest.spyOn(window, "open").mockImplementation(() => null);

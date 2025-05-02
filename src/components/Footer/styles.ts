@@ -1,11 +1,12 @@
 import styled from "styled-components";
 import { VStack as VStackChakra } from "@chakra-ui/react";
 import NextLink from "next/link";
+import COLORS from "@/themes/colors.pallete";
 
 export const Container = styled.div``;
 
 export const Content = styled.div`
-  background: #002d4b;
+  background: ${COLORS.primary[500]};
   height: 375px;
   flex-direction: column;
   padding-left: 80px;
@@ -30,7 +31,7 @@ export const ContentFooter = styled.div`
 export const Body = styled.div``;
 
 export const VStack = styled(VStackChakra)`
-  color: #fff;
+  color: ${COLORS.white[100]};
   align-items: flex-start !important;
 `;
 
@@ -56,7 +57,7 @@ export const FooterTitle = styled.div`
   font-weight: 700;
   line-height: 28px;
   margin-bottom: 16px;
-  color: #fff;
+  color: ${COLORS.white[100]};
   text-decoration: underline;
 `;
 

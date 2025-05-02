@@ -27,9 +27,9 @@ type Story = StoryObj<typeof Icon>;
 
 export const FacebookPrimary: Story = {
   args: {
-    type: "primary", // Tipo do ícone configurado como 'primary'
-    iconName: "facebook", // Nome do ícone configurado como 'facebook'
-    alt: "Facebook Icon", // Texto do atributo alt
+    type: "primary",
+    iconName: "facebook",
+    alt: "Facebook Icon",
   },
 };
 

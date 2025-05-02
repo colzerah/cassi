@@ -35,7 +35,7 @@ const mockProps: AppProps = {
 };
 
 describe("App", () => {
-  it("renderiza corretamente com os provedores", () => {
+  it("renders correctly with providers", () => {
     render(<App {...mockProps} />);
     expect(screen.getByTestId("mock-component")).toBeInTheDocument();
   });

@@ -1,33 +1,33 @@
 import { Meta, StoryObj } from "@storybook/react";
-import { Input } from "@/components/Input"; // Ajuste o caminho se necessário
+import { Input } from "@/components/Input";
 
 const meta: Meta<typeof Input> = {
-  title: "Components/Input", // Título na árvore do Storybook
-  component: Input, // Componente que estamos documentando
-  tags: ["autodocs"], // Tags para automatizar a documentação
+  title: "Components/Input",
+  component: Input,
+  tags: ["autodocs"],
   argTypes: {
-    onChange: { action: "changed" }, // Ação de mudança no valor do input
+    onChange: { action: "changed" },
     placeholder: {
-      control: "text", // Permite editar o texto do placeholder
+      control: "text",
     },
     value: {
-      control: "text", // Permite editar o valor do input
+      control: "text",
     },
     label: {
-      control: "text", // Permite editar o texto do label
+      control: "text",
     },
     mask: {
-      control: "radio", // Controle para selecionar o tipo de máscara
-      options: ["phone"], // Máscaras disponíveis
+      control: "radio",
+      options: ["phone"],
     },
     disabled: {
-      control: "boolean", // Controle para desabilitar o input
+      control: "boolean",
     },
     isInvalid: {
-      control: "boolean", // Controle para indicar se o input é inválido
+      control: "boolean",
     },
     searchIput: {
-      control: "boolean", // Controle para alternar entre input normal e de busca
+      control: "boolean",
     },
   },
 };
@@ -38,9 +38,9 @@ type Story = StoryObj<typeof Input>;
 
 export const Default: Story = {
   args: {
-    label: "Texto do Label", // Texto do label
-    placeholder: "Digite algo...", // Texto do placeholder
-    value: "", // Valor inicial do input
+    label: "Texto do Label",
+    placeholder: "Digite algo...",
+    value: "",
   },
 };
 
@@ -48,8 +48,8 @@ export const WithPhoneMask: Story = {
   args: {
     label: "Telefone",
     placeholder: "Digite seu telefone",
-    mask: "phone", // Máscara de telefone
-    value: "", // Valor inicial
+    mask: "phone",
+    value: "",
   },
 };
 
@@ -57,14 +57,14 @@ export const Disabled: Story = {
   args: {
     label: "Input Desabilitado",
     placeholder: "Você não pode editar",
-    disabled: true, // Input desabilitado
+    disabled: true,
     value: "Texto de exemplo",
   },
 };
 
 export const SearchInput: Story = {
   args: {
-    searchIput: true, // Ativa o estilo de input de busca
+    searchIput: true,
     placeholder: "Busque algo...",
     value: "",
   },

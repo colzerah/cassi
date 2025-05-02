@@ -1,3 +1,4 @@
+import COLORS from "@/themes/colors.pallete";
 import {
   Menu as MenuChakra,
   MenuButton as MenuButtonChakra,
@@ -25,7 +26,7 @@ export const Body = styled.div`
   align-items: center;
   justify-content: center;
   height: 50px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px ${COLORS.black[100]};
 `;
 
 export const IconNav = styled.img`
@@ -56,28 +57,27 @@ export const DivIcon = styled.div`
 
 export const NavItem = styled(Text)`
   font-size: 14px !important;
-  color: #2d2d2d !important;
+  color: ${COLORS.gray[600]} !important;
   line-height: 22px !important;
-  /* cursor: pointer; */
-  /* margin: 0 12px;
-  
+  margin: 0 12px;
   white-space: nowrap;
   font-size: 14px !important;
-  color: #2d2d2d !important;
-  line-height: 22px !important; */
+  color: ${COLORS.gray[600]} !important;
+  line-height: 22px !important;
+  cursor: pointer;
 `;
 
 export const Menu = styled(MenuChakra)``;
 
 export const MenuButton = styled(MenuButtonChakra)`
   font-size: 14px !important;
-  color: #2d2d2d !important;
+  color: ${COLORS.gray[600]} !important;
   line-height: 22px !important;
 `;
 
 export const MenuList = styled(MenuListChakra)`
   font-size: 14px !important;
-  color: #2d2d2d !important;
+  color: ${COLORS.gray[600]} !important;
   line-height: 22px !important;
 `;
 

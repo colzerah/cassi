@@ -22,8 +22,8 @@ type Story = StoryObj<typeof Alert>;
 
 export const Success: Story = {
   args: {
-    type: "success", // Tipo do alerta configurado como 'success'
-    children: "Operação realizada com sucesso!", // Mensagem do alerta
+    type: "success",
+    children: "Operação realizada com sucesso!",
   },
 };
 

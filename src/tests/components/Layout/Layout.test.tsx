@@ -1,7 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import Layout from "@/components/Layout";
 
-// Mock dos componentes filhos
 jest.mock("@/components/NavBar", () => ({
   Navbar: () => <nav data-testid="navbar">Navbar</nav>,
 }));
@@ -11,7 +10,7 @@ jest.mock("@/components/Footer", () => ({
 }));
 
 describe("Layout", () => {
-  it("deve renderizar o Navbar, o Footer e o conteúdo principal", () => {
+  it("should render the Navbar, Footer and main content", () => {
     render(
       <Layout>
         <div data-testid="main-content">Conteúdo principal</div>

@@ -1,6 +1,7 @@
 import React from "react";
 
 import { Container, H1, H2, Text } from "./styles";
+import COLORS from "@/themes/colors.pallete";
 
 interface LabelProps {
   type?: "h1" | "h2" | "text";
@@ -29,10 +30,10 @@ export function Label({
 }: LabelProps) {
   const resolvedColor = React.useMemo(() => {
     const colors = {
-      primary: "#002D4B",
-      secondary: "#2D2D2D",
-      tertiary: "#505251",
-      white: "#FFFFFF",
+      primary: COLORS.primary[500],
+      secondary: COLORS.gray[600],
+      tertiary: COLORS.gray[700],
+      white: COLORS.white[100],
     };
     return colors[colorScheme];
   }, [colorScheme]);

@@ -1,24 +1,25 @@
 import { render, screen, fireEvent } from "@testing-library/react";
 import { Input } from "@/components/Input";
+import COLORS from "@/themes/colors.pallete";
 
 const placeholderText = "Digite aqui...";
 
 describe("Input", () => {
-  it("deve renderizar o campo de input com o texto do placeholder", () => {
+  it("should render the input field with the placeholder text", () => {
     render(<Input placeholder={placeholderText} />);
 
     const inputElement = screen.getByPlaceholderText(placeholderText);
     expect(inputElement).toBeInTheDocument();
   });
 
-  it("deve formatar o valor inicial com máscara de telefone", () => {
+  it("must format initial value with phone mask", () => {
     render(<Input mask="phone" value="11999998888" />);
 
     const input = screen.getByDisplayValue("(11) 99999-8888");
     expect(input).toBeInTheDocument();
   });
 
-  it("deve aplicar máscara de telefone ao digitar", () => {
+  it("must apply phone mask when typing", () => {
     const handleChange = jest.fn();
     render(
       <Input
@@ -38,7 +39,7 @@ describe("Input", () => {
     expect(handleChange).toHaveBeenCalledWith("11999998888");
   });
 
-  it("deve limitar o número a no máximo 11 dígitos antes de aplicar a máscara", () => {
+  it("must limit the number to a maximum of 11 digits before applying the mask", () => {
     const handleChange = jest.fn();
     render(
       <Input
@@ -55,11 +56,10 @@ describe("Input", () => {
     fireEvent.change(input, { target: { value: "11999998888888" } });
 
     expect(input.value).toBe("(11) 99999-8888");
-
     expect(handleChange).toHaveBeenCalledWith("11999998888");
   });
 
-  it("deve aplicar a máscara de telefone corretamente", () => {
+  it("must apply the phone mask correctly", () => {
     const phoneInput = "11987654321";
 
     render(<Input placeholder={placeholderText} mask="phone" />);
@@ -70,7 +70,7 @@ describe("Input", () => {
     expect(inputElement).toHaveValue("(11) 98765-4321");
   });
 
-  it("deve chamar o onChange ao digitar no input", () => {
+  it("must call onChange when typing in the input", () => {
     const handleChange = jest.fn();
     const value = "1234567890";
 
@@ -118,6 +118,6 @@ describe("Input", () => {
     render(<Input isInvalid placeholder={placeholderText} />);
 
     const inputElement = screen.getByPlaceholderText(placeholderText);
-    expect(inputElement).toHaveStyle("border-color: #FF5C5C");
+    expect(inputElement).toHaveStyle(`border-color: ${COLORS.red[200]}`);
   });
 });

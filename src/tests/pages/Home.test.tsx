@@ -33,30 +33,30 @@ describe("Home", () => {
       </Provider>
     );
 
-  it("deve exibir o nome do usuário", () => {
+  it("should display the username", () => {
     renderComponent();
     expect(screen.getByText("Olá, Dyego Lima")).toBeInTheDocument();
   });
 
-  it("deve exibir os botões 'Sim, foi aberto por mim' e 'Não reconheço'", () => {
+  it("should display the buttons 'Yes, it was opened by me' and 'I don't recognize'", () => {
     renderComponent();
     expect(screen.getByText("Sim, foi aberto por mim")).toBeInTheDocument();
     expect(screen.getByText("Não reconheço")).toBeInTheDocument();
   });
 
-  it("deve despachar ação ao clicar em 'Não reconheço'", () => {
+  it("should dispatch action when clicking on 'I do not recognize'", () => {
     renderComponent();
     fireEvent.click(screen.getByText("Não reconheço"));
     expect(store.dispatch).toHaveBeenCalled();
   });
 
-  it("deve despachar ação ao clicar em 'Sim, foi aberto por mim'", () => {
+  it("should dispatch action when clicking 'Yes, it was opened by me'", () => {
     renderComponent();
     fireEvent.click(screen.getByText("Sim, foi aberto por mim"));
     expect(store.dispatch).toHaveBeenCalled();
   });
 
-  it("deve exibir alerta de sucesso se confirmOpening for true", () => {
+  it("should display success alert if confirmOpening is true", () => {
     store = mockStore({
       cassiState: {
         user: { name: "Dyego Lima" },
@@ -77,7 +77,7 @@ describe("Home", () => {
     expect(screen.getByText(/Abertura da NIP /i)).toBeInTheDocument();
   });
 
-  it("deve abrir o modal ao clicar em 'Sim' quando recognizeNIP for true", () => {
+  it("should open modal when clicking 'Yes' when recognizeNIP is true", () => {
     store = mockStore({
       cassiState: {
         user: { name: "Dyego Lima" },
@@ -99,7 +99,7 @@ describe("Home", () => {
     expect(screen.getByRole("dialog")).toBeInTheDocument();
   });
 
-  it("deve despachar a ação de setRecognizeInterlocutor ao confirmar no modal", async () => {
+  it("must dispatch the set Recognize Interlocutor action when confirming in the modal", async () => {
     store = mockStore({
       cassiState: {
         user: {
@@ -113,10 +113,8 @@ describe("Home", () => {
       },
     });
 
-    // Mock do dispatch
     store.dispatch = jest.fn();
 
-    // Renderiza o componente
     render(
       <Provider store={store}>
         <ChakraProvider>
@@ -145,7 +143,7 @@ describe("Home", () => {
     );
   });
 
-  it("deve abrir o modal com valor false ao clicar em 'Não' quando recognizeNIP é true", async () => {
+  it("should open modal with false value when clicking 'No' when recognizeNIP is true", async () => {
     const store = mockStore({
       cassiState: {
         user: { name: "Dyego Lima" },

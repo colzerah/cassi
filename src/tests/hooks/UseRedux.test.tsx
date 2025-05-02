@@ -2,18 +2,17 @@ import { renderHook } from "@testing-library/react";
 import { useAppDispatch, useAppSelector } from "@/hooks/useRedux";
 import { useDispatch, useSelector } from "react-redux";
 
-// Mocks
 jest.mock("react-redux", () => ({
   useDispatch: jest.fn(),
   useSelector: jest.fn(),
 }));
 
-describe("Hooks personalizados - useRedux", () => {
+describe("Custom Hooks - useRedux", () => {
   beforeEach(() => {
     jest.clearAllMocks();
   });
 
-  it("useAppDispatch deve retornar o dispatch corretamente", () => {
+  it("useAppDispatch should return dispatch correctly", () => {
     const mockDispatch = jest.fn();
     (useDispatch as unknown as jest.Mock).mockReturnValue(mockDispatch);
 
@@ -23,7 +22,7 @@ describe("Hooks personalizados - useRedux", () => {
     expect(useDispatch).toHaveBeenCalledTimes(1);
   });
 
-  it("useAppSelector deve retornar o valor correto do useSelector", () => {
+  it("useAppSelector should return the correct value of useSelector", () => {
     const mockState = { cassiState: { user: { name: "Dyego" } } };
     (useSelector as unknown as jest.Mock).mockImplementation((selectorFn) =>
       selectorFn(mockState)

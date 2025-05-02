@@ -1,3 +1,4 @@
+import COLORS from "@/themes/colors.pallete";
 import styled from "styled-components";
 import {
   Alert as AlertChakra,
@@ -27,7 +28,7 @@ export const AlertDescription = styled(AlertDescriptionChakra)`
   font-size: 14px;
   font-family: "Roboto", sans-serif;
   line-height: 20px;
-  color: #484848;
+  color: ${COLORS.gray[800]};
 `;
 
 export const IconSuccess = styled.img`

@@ -1,3 +1,4 @@
+import { Button } from "@/components/Button";
 import Head from "next/head";
 
 export default function Home() {
@@ -10,7 +11,9 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div>
-        <main></main>
+        <main>
+          <Button title="Button" onClick={() => {}} />
+        </main>
         <footer></footer>
       </div>
     </>

@@ -14,7 +14,7 @@ const Layout = ({ children }: LayoutProps) => {
       <ColorModeScript initialColorMode={LightTheme.config.initialColorMode} />
       <Navbar />
       <main>{children}</main>
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 };

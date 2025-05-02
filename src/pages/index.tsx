@@ -1,4 +1,5 @@
 import { Button } from "@/components/Button";
+import { Icon } from "@/components/Icon";
 import Head from "next/head";
 
 export default function Home() {
@@ -13,6 +14,7 @@ export default function Home() {
       <div>
         <main>
           <Button title="Button" onClick={() => {}} />
+          <Icon type="primary" iconName="facebook" onClick={() => {}} />
         </main>
         <footer></footer>
       </div>

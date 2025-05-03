@@ -90,7 +90,7 @@ src/
 >
 > ![Home Page](./src/assets/Screenshots/PRINT_TELA.png)  
 > ![Home Footer](./src/assets/Screenshots/PRINT_TELA_FOOTER.png)  
-> ![Home Modal](./src/assets/Screenshots/PRINT_TELA_FOOTER.png)  
+> ![Home Modal](./src/assets/Screenshots/PRINT_TELA_MODAL.png)  
 > ![Home Storybook](./src/assets/Screenshots/PRINT_STORYBOOK.png)  
 > ![Home Jest](./src/assets/Screenshots/PRINT_JEST_COVERAGE.png)  
 

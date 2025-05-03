@@ -40,6 +40,14 @@ A proposta da aplicação é servir como um pequeno **webpage demonstrativo** no
 
 ---
 
+## 🧾 Protótipo do Projeto
+
+Você pode acessar o protótipo visual do projeto no Figma através do link abaixo:
+
+🔗 [Acessar Protótipo no Figma](https://www.figma.com/design/IIN5l5UdwQcIq18s0PCDdX/Processo-Seletivo-2025?node-id=0-977&t=OUTNzYfUJOwYGVDE-0)
+
+---
+
 ## 🖥️ Como rodar o projeto localmente
 
 ```bash
